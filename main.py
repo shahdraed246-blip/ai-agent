@@ -10,7 +10,7 @@ MAX_ITERATIONS = 20
 
 def generate_content(client, messages, verbose):
     response = client.chat.completions.create(
-        model="gemini-flash-lite-latest",
+        model="openrouter/free",
         messages=messages,
         tools=available_functions,
         temperature=0,
@@ -42,10 +42,10 @@ def generate_content(client, messages, verbose):
 
 def main():
     load_dotenv()
-    api_key = os.environ.get("GEMINI_API_KEY")
+    api_key = os.environ.get("OPENROUTER_API_KEY")
 
     if api_key is None:
-        raise RuntimeError("GEMINI_API_KEY not found in environment variables")
+        raise RuntimeError("OPENROUTER_API_KEY not found in environment variables")
 
     parser = argparse.ArgumentParser(description="Chatbot")
     parser.add_argument("user_prompt", type=str, help="User prompt")
@@ -53,7 +53,7 @@ def main():
     args = parser.parse_args()
 
     client = OpenAI(
-        base_url="https://generativelanguage.googleapis.com/v1beta/openai/",
+        base_url="https://openrouter.ai/api/v1",
         api_key=api_key,
     )
 
