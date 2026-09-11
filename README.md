@@ -29,7 +29,7 @@ formatted JSON.
 Requirements: Python 3.10+, uv, an OpenRouter account.
 
 ```sh
-git clone https://github.com/YOUR-USERNAME/YOUR-REPO-NAME.git
+git clone https://github.com/shahdraed246-blip/ai-agent.git
 cd YOUR-REPO-NAME
 uv sync
 ```
