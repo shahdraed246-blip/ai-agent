@@ -30,7 +30,7 @@ Requirements: Python 3.10+, uv, an OpenRouter account.
 
 ```sh
 git clone https://github.com/shahdraed246-blip/ai-agent.git
-cd YOUR-REPO-NAME
+cd ai-agent
 uv sync
 ```
 
